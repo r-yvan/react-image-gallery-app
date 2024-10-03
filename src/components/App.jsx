@@ -1,12 +1,19 @@
 import { useState } from "react";
 import React from "react";
 import "../styles/index.css";
-import Hello from "./Hello";
+import Home from "./Home";
+import Overview from "./Overview";
 
 const App = () => {
+  const [isOverviewSelected, setIsOverviewSelected] = useState(false);
+
   return (
-    <div>
-      <Hello />
+    <div className="bg-component">
+      {isOverviewSelected ? (
+        <Overview goToHome={() => setIsOverviewSelected(false)}/>
+      ) : (
+        <Home goToOverview={() => setIsOverviewSelected(true)} />
+      )}
     </div>
   );
 };
