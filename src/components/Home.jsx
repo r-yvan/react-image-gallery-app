@@ -2,7 +2,7 @@ import React from "react";
 import temp from "../assets/temp.jpg";
 import random from "../assets/jh.png";
 
-const Home = ({ goToOverview, goToCategories }) => {
+const Home = () => {
   return (
     <div className="font-body text-white bg-body flex flex-col">
       <div className="flex flex-col gap-10 bg-component mt-2 rounded-2xl mx-2">

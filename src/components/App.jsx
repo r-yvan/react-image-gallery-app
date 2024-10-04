@@ -10,6 +10,7 @@ import {
   useNavigate,
 } from "react-router-dom";
 import Layout from "./Layout";
+import Nature from "./Nature";
 
 const App = () => {
   return (
@@ -18,7 +19,11 @@ const App = () => {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="/overview" element={<Overview />} />
-          <Route path="/categories" element={<Overview />} />
+          <Route path="/categories" element={<Categories />} />
+          <Route path="/categories/nature" element={<Nature/>} />
+          <Route path="/categories/military" element={<Nature/>} />
+          <Route path="/categories/fantasy" element={<Nature/>} />
+          <Route path="/categories/animals" element={<Nature/>} />
         </Route>
       </Routes>
     </Router>
