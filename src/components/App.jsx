@@ -1,20 +1,27 @@
-import { useState } from "react";
 import React from "react";
 import "../styles/index.css";
 import Home from "./Home";
 import Overview from "./Overview";
+import Categories from "./Categories";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useNavigate,
+} from "react-router-dom";
+import Layout from "./Layout";
 
 const App = () => {
-  const [isOverviewSelected, setIsOverviewSelected] = useState(false);
-
   return (
-    <div className="bg-component">
-      {isOverviewSelected ? (
-        <Overview goToHome={() => setIsOverviewSelected(false)}/>
-      ) : (
-        <Home goToOverview={() => setIsOverviewSelected(true)} />
-      )}
-    </div>
+    <Router>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="/overview" element={<Overview />} />
+          <Route path="/categories" element={<Overview />} />
+        </Route>
+      </Routes>
+    </Router>
   );
 };
 
