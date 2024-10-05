@@ -37,3 +37,7 @@
 .transparent-box {
     box-shadow: inset 0 0 100px rgba(111, 36, 250, 0.8); /* Blue inner shadow */
 }
+
+.selected-image-width {
+    width: 1400px;
+}
