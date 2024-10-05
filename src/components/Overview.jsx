@@ -1,5 +1,5 @@
 import React from "react";
-import temp from "../assets/temp.jpg";
+import temp from "../assets/fantasy/temp.jpg";
 
 const Overview = ({ goToHome }) => {
   return (

@@ -1,5 +1,5 @@
 import React from "react";
-import temp from "../assets/temp.jpg";
+import temp from "../assets/fantasy/temp.jpg";
 import random from "../assets/jh.png";
 
 const Home = () => {

@@ -11,7 +11,9 @@ import {
 } from "react-router-dom";
 import Layout from "./Layout";
 import Nature from "./Nature";
-
+import Military from "./Military";
+import Fantasy from "./Fantasy";
+import Animals from "./Animals";
 const App = () => {
   return (
     <Router>
@@ -21,9 +23,9 @@ const App = () => {
           <Route path="/overview" element={<Overview />} />
           <Route path="/categories" element={<Categories />} />
           <Route path="/categories/nature" element={<Nature/>} />
-          <Route path="/categories/military" element={<Nature/>} />
-          <Route path="/categories/fantasy" element={<Nature/>} />
-          <Route path="/categories/animals" element={<Nature/>} />
+          <Route path="/categories/military" element={<Military/>} />
+          <Route path="/categories/fantasy" element={<Fantasy/>} />
+          <Route path="/categories/animals" element={<Animals/>} />
         </Route>
       </Routes>
     </Router>
