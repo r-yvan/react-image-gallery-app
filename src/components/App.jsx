@@ -3,12 +3,7 @@ import "../styles/index.css";
 import Home from "./Home";
 import Overview from "./Overview";
 import Categories from "./Categories";
-import {
-  BrowserRouter as Router,
-  Route,
-  Routes,
-  useNavigate,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
 import Layout from "./Layout";
 import Nature from "./Nature";
 import Military from "./Military";
