@@ -32,8 +32,8 @@ const Nature = () => {
   }, [isImageSelected]);
 
   return (
-    <div className="text-white font-body bg-body">
-      <div className="bg-component mt-2 mx-2 rounded-2xl pb-10">
+    <div className="text-white font-body bg-body h-full">
+      <div className="bg-component h-fit mt-2 mx-2 rounded-2xl pb-10">
         <div className="flex justify-center text-4xl font-bold mb-10 rounded-2xl pt-4">
           <h2>Nature</h2>
         </div>
@@ -58,7 +58,7 @@ const Nature = () => {
       {isImageSelected && (
         <div
           className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
-          onClick={() => setIsImageSelected(false)} 
+          onClick={() => setIsImageSelected(false)}
         >
           <div
             className="relative bg-component rounded-2xl shadow-lg overflow-hidden p-2"
