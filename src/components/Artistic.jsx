@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 
-const images = import.meta.glob("../assets/fantasy/*.{png,jpg,jpeg,svg}");
+const images = import.meta.glob("../assets/artistic/*.{png,jpg,jpeg,svg}");
 
-const Fantasy = () => {
-  const [fantasyImages, setFantasyImages] = useState([]);
+const Artistic = () => {
+  const [artisticImages, setArtisticImages] = useState([]);
   const [selectedImage, setSelectedImage] = useState(null);
   const [isImageSelected, setIsImageSelected] = useState(false);
 
@@ -15,7 +15,7 @@ const Fantasy = () => {
           return module.default;
         })
       );
-      setFantasyImages(imagePaths);
+      setArtisticImages(imagePaths);
     };
     loadImages();
   }, []);
@@ -35,10 +35,10 @@ const Fantasy = () => {
     <div className="text-white font-body bg-body">
       <div className="bg-component mt-2 mx-2 rounded-2xl">
         <div className="flex justify-center text-4xl font-bold mb-10 rounded-2xl pt-4">
-          <h2>Fantasy</h2>
+          <h2>Artistic</h2>
         </div>
         <div className="flex flex-wrap flex-row gap-10 w-full h-full pl-16">
-          {fantasyImages.map((image, index) => (
+          {artisticImages.map((image, index) => (
             <div
               key={index}
               className="flex flex-col flex-shrink-0 bg-card rounded-2xl p-2 card-width border-white border-2 border-opacity-15 cursor-pointer"
@@ -48,7 +48,7 @@ const Fantasy = () => {
               }}
             >
               <div className="w-full rounded-2xl overflow-hidden">
-                <img src={image} alt={`Fantasy ${index}`} />
+                <img src={image} alt={`Artistic ${index}`} />
               </div>
             </div>
           ))}
@@ -82,4 +82,4 @@ const Fantasy = () => {
   );
 };
 
-export default Fantasy;
+export default Artistic;
