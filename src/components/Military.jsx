@@ -18,7 +18,6 @@ const Military = () => {
       setMilitaryImages(imagePaths);
     };
     loadImages();
-
   }, []);
   useEffect(() => {
     if (isImageSelected) {
@@ -32,12 +31,12 @@ const Military = () => {
   }, [isImageSelected]);
 
   return (
-    <div className="text-white font-body bg-body">
-      <div className="bg-component mt-2 mx-2 rounded-2xl">
+    <div className="text-white font-body bg-body pb-10">
+      <div className="flex flex-col bg-component mt-2 mx-2 rounded-2xl h-full">
         <div className="flex justify-center text-4xl font-bold mb-10 rounded-2xl pt-4">
           <h2>Military</h2>
         </div>
-        <div className="flex flex-wrap flex-row gap-10 w-full h-full pl-16">
+        <div className="flex flex-row flex-wrap gap-10 pl-16">
           {militaryImages.map((image, index) => (
             <div
               key={index}
@@ -54,14 +53,13 @@ const Military = () => {
           ))}
         </div>
       </div>
-
       {isImageSelected && (
         <div
           className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-70 z-50"
-          onClick={() => setIsImageSelected(false)} 
+          onClick={() => setIsImageSelected(false)}
         >
           <div
-            className="relative bg-component rounded-2xl shadow-lg overflow-hidden p-2"
+            className="relative bg-component rounded-2xl shadow-lg overflow-hidden p-1"
             onClick={(e) => e.stopPropagation()}
           >
             <img

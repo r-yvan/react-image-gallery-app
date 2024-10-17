@@ -5,7 +5,7 @@ import natureImage from "../assets/nature/backiee-279126-landscape.jpg";
 import militaryImage from "../assets/military/backiee-108798-landscape.jpg";
 import fantasyImage from "../assets/fantasy/backiee-276788-landscape.jpg";
 import cyberpunkIMage from "../assets/cyberpunk/backiee-282702-landscape.jpg";
-import carsImage from "../assets/car/backiee-275620-landscape.jpg";
+import carsImage from "../assets/cars/backiee-275620-landscape.jpg";
 import minimalImage from "../assets/minimal/backiee-218349-landscape.jpg";
 import cityImage from "../assets/city/moscowScape.jpg";
 import artisticImage from "../assets/fantasy/backiee-294538-landscape.jpg";
@@ -60,7 +60,7 @@ const categories = [
 
 const Categories = () => {
   return (
-    <div className="bg-component mt-2 mx-2 rounded-2xl text-white font-body">
+    <div className="bg-component mt-2 mx-2 rounded-2xl text-white font-body pb-10">
       <div className="flex justify-center text-4xl font-bold mb-10 rounded-2xl pt-4">
         <h2>Categories</h2>
       </div>

@@ -33,7 +33,7 @@ const Cyberpunk = () => {
 
   return (
     <div className="text-white font-body bg-body">
-      <div className="bg-component mt-2 mx-2 rounded-2xl">
+      <div className="bg-component mt-2 mx-2 rounded-2xl pb-10">
         <div className="flex justify-center text-4xl font-bold mb-10 rounded-2xl pt-4">
           <h2>Cyberpunk</h2>
         </div>
