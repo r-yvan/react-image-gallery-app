@@ -1,45 +1,54 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import random from "../assets/jh.png";
+const imgs = import.meta.glob("../assets/latest/*.{png,jpg,jpeg,svg}");
 
 const Home = () => {
-  const images = [
+  useEffect(() => {
+    const loadImages = async () => {
+      const imagePaths = await Promise.all(
+        Object.keys(imgs).map(async (path) => {
+          const module = await imgs[path]();
+          return module.default;
+        })
+      );
+      setImages((prevImages) => prevImages.map((images, index) => (images = {...images, src: imagePaths[index]})));
+    };
+    loadImages();
+  }, [])
+
+  const [images, setImages] = useState([
     {
-      src: {},
       header: "New York City",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
     },
     {
-      src: {},
       header: "New York City",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
     },
     {
-      src: {},
       header: "New York City",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
     },
     {
-      src: {},
       header: "New York City",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
     },
     {
-      src: {},
       header: "New York City",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
     },
     {
-      src: {},
       header: "New York City",
       description:
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
     },
-  ];
+  ]);
+  
   return (
     <div className="font-body text-white bg-body flex flex-col">
       <div className="flex flex-col gap-10 bg-component mt-2 rounded-2xl mx-2">
@@ -73,18 +82,17 @@ const Home = () => {
             <h1 className="text-2xl font-bold">View Latest Images</h1>
           </div>
           <div className="flex no-wrap overflow-x-auto flex-row gap-10 for-scroll-bar">
-            <div className="flex flex-col flex-shrink-0 pb-3 bg-card rounded-2xl card-width border-white border-2 border-opacity-15">
-              <div className="w-full rounded-t-2xl overflow-hidden mb-5">
-                <img src={temp} alt="" />
+            {images.map((image, index) => (
+              <div key={index} className="flex flex-col flex-shrink-0 pb-3 bg-card rounded-2xl card-width border-white border-2 border-opacity-15">
+                <div className="w-full rounded-t-2xl overflow-hidden mb-5">
+                  <img src={image.src} alt="" />
+                </div>
+                <div className="flex flex-col ml-3 p-3 border-l-4 border-blue-500 ">
+                  <h1 className="font-semibold">{image.header}</h1>
+                  <p>{image.description}</p>
+                </div>
               </div>
-              <div className="flex flex-col ml-3 p-3 border-l-4 border-blue-500 ">
-                <h1 className="font-semibold">New York City</h1>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Possimus, dolor.
-                </p>
-              </div>
-            </div>
+            ))}
           </div>
         </div>
       </div>
