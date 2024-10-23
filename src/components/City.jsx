@@ -37,17 +37,17 @@ const City = () => {
         <div className="flex justify-center text-4xl font-bold mb-10 rounded-2xl pt-4">
           <h2>City</h2>
         </div>
-        <div className="flex flex-wrap flex-row gap-10 w-full h-full pl-16">
+        <div className="flex flex-wrap flex-row gap-5 w-full h-full pl-16">
           {cityImages.map((image, index) => (
             <div
               key={index}
-              className="flex flex-col flex-shrink-0 bg-card rounded-2xl p-2 card-width border-white border-2 border-opacity-15 cursor-pointer"
+              className="flex flex-col flex-shrink-0 bg-card rounded-xl card-width border-white border-2 border-opacity-15 cursor-pointer"
               onClick={() => {
                 setSelectedImage(image);
                 setIsImageSelected(true);
               }}
             >
-              <div className="w-full rounded-2xl overflow-hidden">
+              <div className="w-full rounded-xl overflow-hidden">
                 <img src={image} alt={`City ${index}`} />
               </div>
             </div>
@@ -61,7 +61,7 @@ const City = () => {
           onClick={() => setIsImageSelected(false)}
         >
           <div
-            className="relative bg-component rounded-2xl shadow-lg overflow-hidden p-2"
+            className="relative bg-component rounded-2xl shadow-lg overflow-hidden"
             onClick={(e) => e.stopPropagation()}
           >
             <img
@@ -70,7 +70,7 @@ const City = () => {
               className="rounded-2xl selected-image-width"
             />
             <button
-              className="absolute top-5 right-7 py-1 px-3 rounded-full border-2 border-white border-opacity-20 text-white bg-blue-500 bg-opacity-20 font-bold text-2xl"
+              className="absolute top-3 right-5 py-1 px-3 rounded-full border-2 border-white border-opacity-20 text-white font-bold text-2xl"
               onClick={() => setIsImageSelected(false)}
             >
               &times;

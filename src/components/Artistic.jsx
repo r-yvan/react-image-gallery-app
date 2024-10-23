@@ -41,7 +41,7 @@ const Artistic = () => {
           {artisticImages.map((image, index) => (
             <div
               key={index}
-              className="flex flex-col flex-shrink-0 bg-card rounded-2xl p-2 card-width border-white border-2 border-opacity-15 cursor-pointer"
+              className="flex flex-col flex-shrink-0 bg-card rounded-2xl card-width border-white border-2 border-opacity-15 cursor-pointer"
               onClick={() => {
                 setSelectedImage(image);
                 setIsImageSelected(true);

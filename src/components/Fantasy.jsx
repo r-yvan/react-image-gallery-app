@@ -37,11 +37,11 @@ const Fantasy = () => {
         <div className="flex justify-center text-4xl font-bold mb-10 rounded-2xl pt-4">
           <h2>Fantasy</h2>
         </div>
-        <div className="flex flex-wrap flex-row gap-10 w-full h-full pl-16">
+        <div className="flex flex-wrap flex-row gap-5 w-full h-full pl-16">
           {fantasyImages.map((image, index) => (
             <div
               key={index}
-              className="flex flex-col flex-shrink-0 bg-card rounded-2xl p-2 card-width border-white border-2 border-opacity-15 cursor-pointer"
+              className="flex flex-col flex-shrink-0 bg-card rounded-2xl card-width border-white border-2 border-opacity-15 cursor-pointer"
               onClick={() => {
                 setSelectedImage(image);
                 setIsImageSelected(true);

@@ -69,13 +69,13 @@ const Categories = () => {
           <Link
             key={index}
             to={category.path}
-            className="flex flex-col flex-shrink-0 bg-card w-96 rounded-xl p-2 border-white border-2 border-opacity-15 duration-200 hover:border-blue-500 hover:border-opacity-45 hover:scale-95"
+            className="flex flex-col flex-shrink-0 bg-card w-96 rounded-xl border-white border-2 border-opacity-15 duration-200 hover:border-blue-500 hover:border-opacity-45 hover:scale-95"
           >
-            <div className="w-full rounded-2xl overflow-hidden mb-5">
+            <div className="w-full rounded-xl overflow-hidden mb-3">
               <img src={category.src} alt={category.name} className="opacity-90 duration-200 hover:opacity-100" />
             </div>
-            <div className="flex flex-col pl-8 border-l-4 border-blue-500">
-              <p className="text-2xl font-bold">{category.name}</p>
+            <div className="flex flex-col ml-3 mb-3 border-l-4 border-blue-500">
+              <p className="text-2xl font-bold ml-3">{category.name}</p>
             </div>
           </Link>
         ))}

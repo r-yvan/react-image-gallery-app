@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import random from "../assets/jh.png";
-const imgs = import.meta.glob("../assets/latest/*.{png,jpg,jpeg,svg}");
+const imgs = import.meta.glob("../assets/overview/*.{png,jpg,jpeg,svg}");
+
 
 const Home = () => {
   useEffect(() => {
@@ -48,7 +49,7 @@ const Home = () => {
         "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
     },
   ]);
-  
+
   return (
     <div className="font-body text-white bg-body flex flex-col">
       <div className="flex flex-col gap-10 bg-component mt-2 rounded-2xl mx-2">
