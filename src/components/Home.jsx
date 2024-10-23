@@ -1,8 +1,45 @@
 import React from "react";
-import temp from "../assets/fantasy/temp.jpg";
 import random from "../assets/jh.png";
 
 const Home = () => {
+  const images = [
+    {
+      src: {},
+      header: "New York City",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
+    },
+    {
+      src: {},
+      header: "New York City",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
+    },
+    {
+      src: {},
+      header: "New York City",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
+    },
+    {
+      src: {},
+      header: "New York City",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
+    },
+    {
+      src: {},
+      header: "New York City",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
+    },
+    {
+      src: {},
+      header: "New York City",
+      description:
+        "Lorem ipsum dolor, sit amet consectetur adipisicing elit.Possimus, dolor",
+    },
+  ];
   return (
     <div className="font-body text-white bg-body flex flex-col">
       <div className="flex flex-col gap-10 bg-component mt-2 rounded-2xl mx-2">
@@ -36,47 +73,11 @@ const Home = () => {
             <h1 className="text-2xl font-bold">View Latest Images</h1>
           </div>
           <div className="flex no-wrap overflow-x-auto flex-row gap-10 for-scroll-bar">
-            <div className="flex flex-col flex-shrink-0 bg-card rounded-2xl p-3 card-width border-white border-2 border-opacity-15">
-              <div className="w-full rounded-2xl overflow-hidden mb-5">
+            <div className="flex flex-col flex-shrink-0 pb-3 bg-card rounded-2xl card-width border-white border-2 border-opacity-15">
+              <div className="w-full rounded-t-2xl overflow-hidden mb-5">
                 <img src={temp} alt="" />
               </div>
-              <div className="flex flex-col pl-8 border-l-4 border-blue-500 ">
-                <h1 className="font-semibold">New York City</h1>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Possimus, dolor.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col flex-shrink-0  bg-card rounded-2xl p-3 card-width border-white border-2 border-opacity-15">
-              <div className="w-full rounded-2xl overflow-hidden mb-5">
-                <img src={temp} alt="" />
-              </div>
-              <div className="flex flex-col pl-8 border-l-4 border-blue-500 ">
-                <h1 className="font-semibold">New York City</h1>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Possimus, dolor.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col flex-shrink-0  bg-card rounded-2xl p-3 card-width border-white border-2 border-opacity-15">
-              <div className="w-full rounded-2xl overflow-hidden mb-5">
-                <img src={temp} alt="" />
-              </div>
-              <div className="flex flex-col pl-8 border-l-4 border-blue-500 ">
-                <h1 className="font-semibold">New York City</h1>
-                <p>
-                  Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                  Possimus, dolor.
-                </p>
-              </div>
-            </div>
-            <div className="flex flex-col flex-shrink-0  bg-card rounded-2xl p-3 card-width border-white border-2 border-opacity-15">
-              <div className="w-full rounded-2xl overflow-hidden mb-5">
-                <img src={temp} alt="" />
-              </div>
-              <div className="flex flex-col pl-8 border-l-4 border-blue-500">
+              <div className="flex flex-col ml-3 p-3 border-l-4 border-blue-500 ">
                 <h1 className="font-semibold">New York City</h1>
                 <p>
                   Lorem ipsum dolor, sit amet consectetur adipisicing elit.
